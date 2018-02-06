@@ -16,12 +16,16 @@ app.use(bodyParser.urlencoded({ extended: true }));
 
 // Allows cross-origin requests from the specified urls
 const corsOptions = {
-  origin: (origin, callback) => {
-    const nineRegex = /^(https?:\/\/(?:.+\.)?nine\.com.au(?::\d{1,5})?)$/;
-    if (nineRegex.test(origin)) {
-      callback(null, true);
+  origin: function(origin, callback) {
+    if (origin !== undefined) {
+      const nineRegex = /^(https?:\/\/(?:.+\.)?nine\.com.au(?::\d{1,5})?)$/;
+      if (nineRegex.test(origin)) {
+        callback(null, true);
+      } else {
+        callback(new Error('Not allowed by CORS'));
+      }
     } else {
-      callback(new Error('Not allowed by CORS'));
+      callback(null, true);
     }
   },
   optionsSuccessStatus: 200 // some legacy browsers (IE11, various SmartTVs) choke on 204
