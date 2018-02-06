@@ -1,0 +1,29 @@
+{
+  "name": "nine-code-test",
+  "version": "1.0.0",
+  "description": "A code test for Nine",
+  "main": "index.js",
+  "scripts": {
+    "dev": "nodemon",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/alfredomariamilano/nine-code-test.git"
+  },
+  "author": "Alfredo Maria Milano",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/alfredomariamilano/nine-code-test/issues"
+  },
+  "homepage": "https://github.com/alfredomariamilano/nine-code-test#readme",
+  "dependencies": {
+    "body-parser": "^1.18.2",
+    "cors": "^2.8.4",
+    "express": "^4.16.2",
+    "morgan": "^1.9.0"
+  },
+  "devDependencies": {
+    "nodemon": "^1.14.12"
+  }
+}
