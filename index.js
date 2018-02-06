@@ -24,13 +24,13 @@ app.use((err, req, res, next) => {
   next();
 });
 
-// Allows cross-origin requests from the specified url
-const corsOptions = {
-  origin: 'https://codingchallenge.nine.com.au/',
-  optionsSuccessStatus: 200 // some legacy browsers (IE11, various SmartTVs) choke on 204
-};
-
-app.use(cors(corsOptions));
+// // Allows cross-origin requests from the specified url
+// const corsOptions = {
+//   origin: 'https://codingchallenge.nine.com.au/',
+//   optionsSuccessStatus: 200 // some legacy browsers (IE11, various SmartTVs) choke on 204
+// };
+//
+// app.use(cors(corsOptions));
 
 // To use the available routes in the router
 app.use(router);
